@@ -1,0 +1,28 @@
+--Create a record store database
+CREATE TABLE records (id INTEGER PRIMARY KEY, album TEXT, artist TEXT, genre TEXT, year INTEGER, price INTEGER);
+
+INSERT INTO records VALUES (1, "Cry Sugar", "Hudson Mohawke", "Electronic", 2022, 30);
+INSERT INTO records VALUES (2, "Renaissance", "Beyonce", "Pop", 2022, 74);
+INSERT INTO records VALUES (3, "Merriweather Post Pavillion", "Animal Collective", "Electronic", 2009, 27);
+INSERT INTO records VALUES (4, "CRASH", "Charli XCX", "Pop", 2022, 30);
+INSERT INTO records VALUES (5, "You Are The Quarry", "Morrissey", "Rock", 2004, 200);
+INSERT INTO records VALUES (6, "Devotion", "Planet 1999", "Electronic", 2021, 40);
+INSERT INTO records VALUES (7, "Apple", "A.G. Cook", "Electronic", 2021, 25);
+INSERT INTO records VALUES (8, "Alias", "Shygirl", "Electronic", 2021, 285);
+INSERT INTO records VALUES (9, "Sawayama", "Rina Sawayama", "Pop", 2020, 35);
+INSERT INTO records VALUES (10, "Reflections", "Hannah Diamond", "Pop", 2020, 48);
+INSERT INTO records VALUES (11, "Magic Oneohtrix Point Never", "Oneohtrix Point Never", "Electronic", 2020, 24);
+INSERT INTO records VALUES (12, "1000 Gecs And The Tree of Clues", "100 Gecs", "Electronic", 2020, 27);
+INSERT INTO records VALUES (13, "How I'm Feeling Now", "Charli XCX", "Pop", 2020, 23);
+INSERT INTO records VALUES (14, "CollXtion I", "Allie X", "Pop", 2016, 94);
+INSERT INTO records VALUES (15, "Kick I", "Arca", "Electronic", 2020, 22);
+
+--display the database ordered by price
+SELECT * FROM records
+ORDER BY price desc;
+
+--what is the avg price of electronic albums?
+SELECT AVG(price) "avg electronic albums price"
+FROM records
+where genre="Electronic";
+
